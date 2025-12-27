@@ -23,7 +23,7 @@ REPO="https://raw.githubusercontent.com/stanislawrabel/C_series/main"
 curl -sSL "$REPO/c.sh" -o c.sh
 curl -sSL "$REPO/devices.txt" -o devices.txt
 
-chmod +x m.sh
+chmod +x c.sh
 
 # 🛠️ Adding an alias for easy launch 
 if ! grep -q "alias c=" ~/.bashrc; then
