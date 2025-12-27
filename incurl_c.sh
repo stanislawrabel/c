@@ -18,7 +18,7 @@ pip install pycryptodome
 pip3 install --upgrade requests pycryptodome git+https://github.com/R0rt1z2/realme-ota
 
 echo "📥 Downloading scripts and data files..."
-REPO="https://raw.githubusercontent.com/stanislawrabel/C_series/main"
+REPO="https://raw.githubusercontent.com/stanislawrabel/c/main"
 
 curl -sSL "$REPO/c.sh" -o c.sh
 curl -sSL "$REPO/devices.txt" -o devices.txt
