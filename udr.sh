@@ -7,6 +7,22 @@ BLUE="\033[34m"
 PURPLE="\033[35m"
 RESET="\033[0m"
 
+echo -e "${GREEN}+=====================================+${RESET}"
+echo -e "${GREEN}|  ${RESET} ${YELLOW}    DownloadeR${RESET} & ${YELLOW}Resolver${RESET}         ${GREEN}|${RESET}"
+
+echo -e "${GREEN}|    ${RED}         by${RESET} ${BLUE}Stano36 ${RESET}             ${GREEN}|${RESET}"
+echo -e "${GREEN}+=====================================+${RESET}"                              
+echo -e "${GREEN}|${RESET} ${YELLOW_BG}${BLACK}  realme   ${RESET}  ${GREEN_BG}${BLACK}  oppo  ${RESET}  ${RED_BG}${WHITE}  Oneplus  ${RESET}  ${GREEN}|${RESET}"
+echo -e "${GREEN}+=====================================+${RESET}" 
+
+
+# === 🧠 CHECK ARIA2 ===
+if ! command -v aria2c &>/dev/null; then
+  echo -e "${RED}❌ aria2c not installed .${RESET}"
+  echo "👉 Run: pkg install aria2 -y"
+  exit 1
+fi
+
 DOWNLOAD_DIR="/storage/emulated/0/Download/DownloadeR"
 LOG_FILE="$DOWNLOAD_DIR/ota_downloads.log"
 mkdir -p "$DOWNLOAD_DIR"
@@ -14,6 +30,7 @@ mkdir -p "$DOWNLOAD_DIR"
 for cmd in aria2c curl python3; do
   command -v "$cmd" >/dev/null || {
     echo -e "${RED}❌ Missing: $cmd${RESET}"
+  
     exit 1
   }
 done
