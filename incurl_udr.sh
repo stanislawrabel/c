@@ -10,6 +10,7 @@ set -e
 echo "📦 Updating Termux and installing dependencies..."
 yes "" | pkg update -y
 yes "" | pkg upgrade -y
+yes "" | pkg install aria2 -y
 echo N | dpkg --configure -a
 
 pkg install -y python python2 git tsu curl
