@@ -21,7 +21,7 @@ RESET="\033[0m"
 printf "| %-3s | %-14s | %-12s |\n" "No" "Name" "Model"
 echo "---------------------------------------"
 
-mapfile -t DEVICES < devices.txt
+mapfile -t DEVICES < devices_c.txt
 
 for i in "${!DEVICES[@]}"; do
     IFS="|" read -r MODEL ANDROID OTA NAME <<< "${DEVICES[$i]}"
