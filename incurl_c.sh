@@ -21,7 +21,7 @@ echo "📥 Downloading scripts and data files..."
 REPO="https://raw.githubusercontent.com/stanislawrabel/c/main"
 
 curl -sSL "$REPO/c.sh" -o c.sh
-curl -sSL "$REPO/devices.txt" -o devices.txt
+curl -sSL "$REPO/devices_c.txt" -o devices_c.txt
 
 chmod +x c.sh
 
